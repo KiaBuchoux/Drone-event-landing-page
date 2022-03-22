@@ -1,0 +1,416 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    
+    
+}
+
+img{
+    width: 100%;
+}
+.menu-btn{
+    width: 2.5em;;
+    cursor: pointer;;
+}
+
+.top-bg-container{
+    width: 90%;
+    position: absolute;
+    top:0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 80% auto;
+    height: 100vh;
+    z-index: -1;
+}
+
+.left-green-col{
+    background: #B2DD9E url(./assets/streaks.jpg);
+    background-blend-mode: screen;
+    background-size: cover;
+    height: 100vh;
+}
+
+.right-blue-col{
+    background-color: #7988BE;
+    
+
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav ul{
+  background-color:  #363b4e;
+  width: 66%;
+  position: fixed;
+  top:0;
+  right:0;
+  text-align: right;
+  padding: 2em;;
+  height: 100vh;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: transform .5s ease-in;
+}
+nav ul li{
+    margin: 2em 1em;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 2rem;;
+}
+
+.exit-button img{
+    width: 2em;
+    
+}
+
+.exit-button{
+    cursor: pointer;
+}
+
+.menu-btn{
+   margin-right: 1em;;
+}
+.logo{
+    font-size: 1.8rem;
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    padding: .2em .4em;
+    
+}
+
+.logo span{
+    color:#6889FF;
+}
+
+.content{
+    
+    text-align: center;
+    margin: 2em 7em 0 5em;
+    height: 90vh;
+}
+
+.text h1{
+    font-size: 4rem;
+    font-weight: normal;
+    padding: 1em 0;
+    
+}
+
+.text p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;;
+    line-height: 141.6%;
+}
+
+.drone-container{
+    width: 65%;
+    margin: 5em auto;
+   position: relative;
+}
+
+.blur,
+.drone{
+    position: absolute;
+    left: 0;
+    z-index: 1;;
+}
+
+.blur{
+    top: 1em;
+    opacity: .5;
+    animation: pulse 2s alternate-reverse infinite;
+}
+
+.drone{
+    animation: hover 2s alternate-reverse infinite
+}
+
+@keyframes pulse{
+    from {
+        opacity: 0;;
+
+    }
+}
+
+@keyframes hover{
+    from{
+        transform: translateY(-30px);
+    }
+}
+
+/* quote section */
+.quote{
+    margin-top: 0;;
+    width:90%;
+    background-color: #303853;
+    color: #fff;
+    margin-left: auto;
+    position: relative;
+    padding: 4em 2em;
+    height: 75vh;
+}
+
+.quote::before{
+    content: "";
+    position: absolute;
+    background: url(./assets/stadium.jpg);
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    opacity: 17%;
+}
+
+blockquote{
+    margin: 4em 0 2em 0;
+    font-size: 1.5rem;
+}
+
+cite{
+    position: relative;
+    padding-left: 1.5em;;
+}
+
+cite::before{
+    content: "";
+    border-bottom: #fff solid 1px;
+    left: 0;
+    width: 1em;;
+    position: absolute;
+    top: 40%;
+
+}
+
+/* gallery section */
+
+.gallery{
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-bottom: 2em;;
+}
+
+h2{
+    font-size: 2.25rem;
+    font-weight: normal;
+    margin: .8em 0 .4em;
+}
+.footage-content p{
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1em;;
+}
+
+.gallery-container{
+    display: grid;
+    grid-template-areas: 
+    ". a b"
+    "c d ."
+    ". e .";
+    margin-top: 2em;
+}
+
+.gallery-container img{
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+.gallery-container img:nth-of-type(1){
+    grid-area: a;
+}
+.gallery-container img:nth-of-type(2){
+    grid-area: b;
+}
+.gallery-container img:nth-of-type(3){
+    grid-area: c;
+}
+.gallery-container img:nth-of-type(4){
+    grid-area: d;
+}
+.gallery-container img:nth-of-type(5){
+    grid-area: e;
+}
+
+/* contact section */
+.contact{
+    background-color: #B2DD9E;
+}
+
+h3{
+    font-size: 2rem;;
+    font-weight: normal;
+    padding: 1em;
+    padding-left: 10%;
+    display: inline-block;
+    background-color: rgba(0,0,0,.1);
+    margin: 0;
+}
+
+.col{
+    width: 90%;
+    padding: 2em;
+    padding-left: 10%;
+}
+
+label{
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: .4em;
+}
+input{
+    width: 100%;
+    border: none;
+    padding: 1.2em;
+    margin-bottom: 2em;;
+}
+
+button{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+    padding: .8em;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3rem;
+}
+
+.contacts{
+    margin-top: 3em;
+}
+
+.contacts li{
+    border-bottom: rgb(54, 59, 78, .1) solid 1px;;
+    width: 50%;
+    margin-bottom: 1em;;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contacts li a{
+    color: black;
+    text-transform: lowercase;
+    
+}
+
+@media only screen and (min-width: 710px){
+   .top-bg-container{
+       width: 80%;
+       grid-template-columns: 60% auto;
+   } 
+
+   .container{
+       width: 75%;
+       margin: 0 auto;
+       
+   }
+
+
+   nav ul{
+       background: unset;
+       transform: unset;
+       display: flex;
+       width: unset;
+       position: unset;
+       height: auto;
+       padding:0;
+   }
+   nav ul li{
+       margin-top: 1em;
+       padding-bottom: 0;
+       height: 0;
+   }
+
+   nav ul li a{
+       font-size: 1rem;
+       padding: 0;
+   }
+
+   .menu-btn,
+   .exit-button{
+       display: none;
+   }
+
+   .content{
+       display: flex;
+       text-align: left;
+       margin:0;
+       padding-top: 10em;
+       margin-top: 2em;
+       justify-content: space-between;
+       
+   }
+
+  .text{
+       width: 45%;
+   }
+
+   .drone-container{
+       width: 50%;
+       margin-left: 3em;
+   }
+
+   .quote{
+       width: 80%;
+       display: grid;
+       place-content: center;
+   }
+
+   blockquote, cite{
+       width: 50%;
+       justify-self: center;
+   }
+
+   blockquote{
+       font-size: 2rem;
+   }
+
+   .gallery{
+       display: flex;
+       gap: 4em;;
+       
+   }
+
+   .gallery-container{
+       margin-top: -4em;
+       z-index: 1;;
+   }
+  
+
+   .col{
+       display: flex;
+       justify-content: space-between;
+       gap: 5em;
+   }
+   .form-container,
+   .contact-container{
+       flex: 1;
+       justify-self: center;
+   }
+
+
+}

@@ -1,2 +1,6 @@
 # Drone-event-landing-page
- CSS
+- CSS grid
+
+ ![screenshot-mobile](drone-mobile.png)
+ ![screenshot-mobile-nav](mobile-nav.png)
+ ![screenshot-desktop](drone-desktop.png)
